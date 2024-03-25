@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão fujão</title>
+</head>
+<body>
+    <p>Me segue no github?</p>
+    <button>Sim</button>
+    <div style="display: inline-block;padding: 8px;background: violet;transition: transform 0.3s;" onmouseover="fugir();" id="fujao" >
+        <button>Não</button>   
+    </div>
+     
+</body>
+</html>
+<script>
+    const fujao = document.getElementById('fujao')
+    function fugir()
+    {
+        maxx = window.screen.width
+        maxy = window.screen.height
+        
+        randx = parseInt(Math.random() * maxx)
+        randy = parseInt(Math.random() * maxy)
+        console.log(`translate(${randx}px, ${randy}px)`)
+        fujao.style.transform=`translate(${randx}px, ${randy}px)`
+    }
+
+</script>
