@@ -4,26 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botão fujão</title>
+    <style>
+        .btn {
+            text-decoration: none;
+            color: white;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .green {
+            background: green;
+        }
+
+        .red {
+            background: red;
+            cursor: default;
+        }
+
+        div {
+            display: inline-block;
+            padding: 8px;
+            transition: transform 0.3s;
+        }
+    </style>
 </head>
 <body>
-    <p>Me segue no github?</p>
-    <button>Sim</button>
-    <div style="display: inline-block;padding: 8px;background: violet;transition: transform 0.3s;" onmouseover="fugir();" id="fujao" >
-        <button>Não</button>   
+    <h1>Me segue no github?</h1>
+    <a href="https://github.com/ramonpsouto/ddm2" target="_blank" class="btn green">Sim</a>
+    <div  onmouseover="fugir();" id="fujao" >
+        <a class="btn red">Não</a>
     </div>
      
 </body>
 </html>
 <script>
+    // pegando elemento pelo id
     const fujao = document.getElementById('fujao')
     function fugir()
-    {
-        maxx = window.screen.width
-        maxy = window.screen.height
-        
-        randx = parseInt(Math.random() * maxx)
-        randy = parseInt(Math.random() * maxy)
-        console.log(`translate(${randx}px, ${randy}px)`)
+    {   
+        randx = parseInt(Math.random() * 700 + 10)
+        randy = parseInt(Math.random() * 700 + 10)
         fujao.style.transform=`translate(${randx}px, ${randy}px)`
     }
 

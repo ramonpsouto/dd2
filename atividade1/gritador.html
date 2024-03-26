@@ -6,16 +6,19 @@
     <title>Gritador</title>
 </head>
 <body>
-    <input type="text" placeholder="Digite uma palavra" id="input" onkeydown="gritar();">
-    <span id="berro" style="display: block;margin-top: 8px;"></span>
+    <!-- usando evento onkeyup para atualizar o parágrafo quando o usuario digitar -->
+    <input type="text" placeholder="Digite uma palavra" id="input" onkeyup="gritar();">
+    <p id="berro" style="display: block;margin-top: 8px;"></p>
 </body>
 </html>
-<script>
+<script>''
     const berro = document.getElementById('berro')
 
     function gritar()
     {
-        let palavra = document.getElementById('input').value
+        // pegando inputs pelo nome da tag
+        let inputs = document.getElementsByTagName('input')
+        let palavra = inputs[0].value
         berro.innerHTML = palavra.toUpperCase()
     }
 </script>

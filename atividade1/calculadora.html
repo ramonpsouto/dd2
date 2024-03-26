@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <p class="result">Soma: </p>
+    <p class="result">Subtração:</p>
+    <p class="result">Multiplicação:</p>
+    <p class="result">Divisão:</p>
+    <p class="result">Potência:</p>
+    <button onclick="calcular();">Calcular novamente</button>
+</body>
+</html>
+<script>
+
+    function potencia(a, b)
+    {
+        return a ** b
+    }
+
+    function calcular()
+    {
+        results = document.querySelectorAll('.result')
+        results[0].innerText = 'Soma: '
+        results[1].innerText = 'Subtração: '
+        results[2].innerText = 'Multiplicação: '
+        results[3].innerText = 'Divisão: '
+        results[4].innerText = 'Potência: '
+        a = parseInt(prompt('Informe um número: '))
+        b = parseInt(prompt('Informe outro número: '))  
+        results[0].innerText += a + b
+        results[1].innerText += a - b
+        results[2].innerText += a * b
+        results[3].innerText += a / b
+        results[4].innerText += potencia(a, b)
+    }
+    calcular()
+    
+</script>

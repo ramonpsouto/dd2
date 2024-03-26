@@ -1,4 +1,4 @@
-const contador = document.getElementById('contador')
+const contador = document.querySelector('.contador')
 
 function clicou()
 {
