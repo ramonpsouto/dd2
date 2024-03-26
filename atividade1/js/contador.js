@@ -1,10 +1,10 @@
+//querySelector
 const contador = document.querySelector('.contador')
 
-function clicou()
-{
-    contador.innerText++
-}
+// arrow function	
+const clicou = () => contador.innerText++
 
+//função nomeada
 function zerar()
 {
     contador.innerText = 0

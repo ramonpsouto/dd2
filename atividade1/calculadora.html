@@ -15,14 +15,19 @@
 </body>
 </html>
 <script>
-
+	//funcao nomeada com parametro
     function potencia(a, b)
     {
         return a ** b
     }
 
+	// função com constructor
+	const somar = new Function('a', 'b', 'return a + b')
+
+	//função nomeada
     function calcular()
     {
+		//querySelectorAll
         results = document.querySelectorAll('.result')
         results[0].innerText = 'Soma: '
         results[1].innerText = 'Subtração: '
@@ -34,9 +39,10 @@
         results[0].innerText += a + b
         results[1].innerText += a - b
         results[2].innerText += a * b
-        results[3].innerText += a / b
+        results[3].innerText += somar(a, b)
         results[4].innerText += potencia(a, b)
     }
+	
     calcular()
     
 </script>

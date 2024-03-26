@@ -11,7 +11,7 @@
     <p id="berro" style="display: block;margin-top: 8px;"></p>
 </body>
 </html>
-<script>''
+<script>
     const berro = document.getElementById('berro')
 
     function gritar()
@@ -19,6 +19,7 @@
         // pegando inputs pelo nome da tag
         let inputs = document.getElementsByTagName('input')
         let palavra = inputs[0].value
+		// deixa todas as letras em caixa alta
         berro.innerHTML = palavra.toUpperCase()
     }
 </script>
